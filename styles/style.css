@@ -15,3 +15,11 @@ body {
     width: 400px;
     text-align: center;
 }
+
+#output-answer {
+    color: white;
+    font-size: larger;
+    background-color: grey;
+    border: black 1px solid;
+    padding: 20px;
+}
