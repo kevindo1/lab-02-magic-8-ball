@@ -4,9 +4,18 @@ describe('Example Test', ()=>{
         cy.visit('/');
     });
 
-    describe('HTML elements', ()=>{   
-        it('contains body tag', ()=>{
-            cy.get('body').should('be.visible');
+    describe('user-interaction', ()=>{   
+        it('user clicks submit button', ()=>{
+            cy.get('#submit-button').click();
+            cy.get('#output-answer').should('exist');
+        });
+    });
+
+    describe('squidward-checkbox', ()=>{   
+        it('user checks box', ()=>{
+            cy.get('#squidward').click();
+            cy.get('#submit-button').click();
+            cy.get('#output-answer').should('have.text', 'No');
         });
     });
 });

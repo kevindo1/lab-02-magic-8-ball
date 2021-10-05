@@ -1,6 +1,7 @@
 // import functions and grab DOM elements
 const submitButton = document.getElementById('submit-button');
 const outputAnswer = document.getElementById('output-answer');
+const userInput = document.getElementById('user-input');
 const squidward = document.getElementById('squidward');
 
 // initialize global state
@@ -16,6 +17,7 @@ const conchAnswers = ['Maybe someday.', 'Never.', 'Neither.', 'I dont think so.'
 // generate random number thats equal to length of the array
 
 submitButton.addEventListener('click', ()=> {
+    userInput.value = '';
     const getRandomNumber = (max)=> {
         return Math.floor(Math.random() * max);
     };
