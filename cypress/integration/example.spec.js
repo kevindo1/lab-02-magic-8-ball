@@ -7,7 +7,7 @@ describe('Example Test', ()=>{
     describe('user-interaction', ()=>{   
         it('user clicks submit button', ()=>{
             cy.get('#submit-button').click();
-            cy.get('#output-answer').should('exist');
+            cy.get('#output-answer').should('be.visible');
         });
     });
 
