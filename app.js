@@ -1,8 +1,7 @@
 // import functions and grab DOM elements
-const userInput = document.getElementById('user-input');
 const submitButton = document.getElementById('submit-button');
 const outputAnswer = document.getElementById('output-answer');
-const displayPicture = document.getElementById('display-picture');
+const squidward = document.getElementById('squidward');
 
 // initialize global state
 
@@ -24,6 +23,11 @@ submitButton.addEventListener('click', ()=> {
     const randomIndex = getRandomNumber(conchAnswers.length);
     const randomAnswer = conchAnswers[randomIndex];
     outputAnswer.textContent = randomAnswer;
+
+    if (squidward.checked === true) {
+        outputAnswer.textContent = 'No';
+        document.getElementById('display-picture').src = './assets/squidward.jpeg';
+    }
 
     if (outputAnswer.textContent === 'No.') {
         document.getElementById('display-picture').src = './assets/scary.jpeg';
